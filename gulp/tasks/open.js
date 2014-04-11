@@ -5,7 +5,7 @@ module.exports = function() {
 
 	var options = {
 		url: "http://localhost:8080",
-		app: "google chrome"
+		app: "chrome"
 	};
 
 	return gulp.src("./index.html").pipe(open("", options));

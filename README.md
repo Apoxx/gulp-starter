@@ -6,11 +6,11 @@ Starter Gulp + Browserify project with examples of how to accomplish some common
 Includes the follwing tools, tasks, and workflows:
 
 - Browserify (with browserify-shim)
-- Compass
+- Stylus + nib
 - CoffeeScript (with source mapping!)
 - jQuery (from npm)
-- Backbone (from npm)
-- Handlebars (as a backbone dependency)
+- Angular (from npm)
+- Jade
 - Non common-js vendor code (like a jQuery plugin)
 - LiveReload
 - Static Server

@@ -1,11 +1,12 @@
 var gulp = require('./gulp')([
 	'browserify',
-	'compass',
+	'stylus',
+    'jade',
 	'images',
 	'open',
 	'watch',
 	'serve'
 ]);
 
-gulp.task('build', ['browserify', 'compass', 'images']);
+gulp.task('build', ['browserify', 'stylus','jade', 'images']);
 gulp.task('default', ['build', 'watch', 'serve', 'open']);
