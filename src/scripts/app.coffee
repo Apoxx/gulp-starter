@@ -5,7 +5,7 @@ plugin = require "plugin"
 index = require "./views/index"
 
 $ "body"
-.append index name : "Apox"
+.append index name : "World"
 
 angular.module("helloworld", [])
 

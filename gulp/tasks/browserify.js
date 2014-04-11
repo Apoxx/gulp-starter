@@ -9,7 +9,7 @@ module.exports = function() {
 			entries: ['./src/scripts/app.coffee'],
 			extensions: ['.coffee','.js']
 		})
-		.require('backbone/node_modules/underscore', { expose: 'underscore' })
+		.require('underscore')
 		.bundle({debug: true})
 		.on('error', notify.onError({
 			message: "<%= error.message %>",
