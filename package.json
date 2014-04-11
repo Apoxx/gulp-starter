@@ -41,7 +41,8 @@
     "gulp-jade": "~0.5.0",
     "gulp-insert": "~0.3.0",
     "nib": "~1.0.2",
-    "connect": "~2.14.4"
+    "connect": "~2.14.4",
+    "underscore": "~1.6.0"
   },
   "dependencies": {
     "jquery": "~2.1.0",
