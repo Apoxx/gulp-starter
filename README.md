@@ -10,6 +10,7 @@ Includes the follwing tools, tasks, and workflows:
 - CoffeeScript (with source mapping!)
 - jQuery (from npm)
 - Angular (from npm)
+- Bootstrap (from npm)
 - Jade
 - Non common-js vendor code (like a jQuery plugin)
 - LiveReload

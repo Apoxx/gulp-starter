@@ -1,4 +1,4 @@
-@import "nib"
-
+@import nib
+@import bootstrap
 h1
   color #ff0000

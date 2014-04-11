@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "jquery": "~2.1.0",
-    "angular": "~1.2.15"
+    "angular": "~1.2.15",
+    "bootstrap-stylus": "~0.2.1"
   }
 }
