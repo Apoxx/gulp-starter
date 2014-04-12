@@ -5,7 +5,7 @@ var path    = require('path');
 
 module.exports = function(){
     var toRemove = path.normalize('/gulp/tasks');
-	var buildPath = path.normalize(__dirname.split(toRemove)[0] + "/build");
+	var buildPath = __dirname.split(toRemove)[0];
     console.log(buildPath);
 	var app = connect()
 		.use(connect.logger('dev'))
