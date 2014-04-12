@@ -6,8 +6,8 @@ var source = require('vinyl-source-stream');
 
 module.exports = function() {
 	return browserify({
-			entries: ['./src/scripts/app.coffee'],
-			extensions: ['.coffee','.js']
+			entries: ['./app/scripts/app.coffee'],
+			extensions: ['.coffee']
 		})
 		.require('underscore')
 		.bundle({debug: true})

@@ -8,5 +8,5 @@ module.exports = function() {
 		app: "chrome"
 	};
 
-	return gulp.src("./index.html").pipe(open("", options));
+	return gulp.src("./build/index.html").pipe(open("", options));
 };
