@@ -12,7 +12,9 @@
   "browserify": {
     "transform": [
       "browserify-shim",
-      "coffeeify"
+      "coffeeify",
+      "debowerify",
+      "deamdify"
     ]
   },
   "browserify-shim": {
@@ -40,7 +42,9 @@
     "gulp-insert": "~0.3.0",
     "nib": "~1.0.2",
     "connect": "~2.14.4",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "debowerify": "~0.7.0",
+    "deamdify": "~0.1.1"
   },
   "dependencies": {
     "jquery": "~2.1.0"

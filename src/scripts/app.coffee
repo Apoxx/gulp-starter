@@ -3,8 +3,7 @@ plugin = require "plugin"
 
 index = require "./views/index"
 
-$ "body"
-.append index name: "World"
+$("body").append index name: "World"
 
 plugin()
 
