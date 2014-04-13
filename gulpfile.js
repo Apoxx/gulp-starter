@@ -9,8 +9,7 @@ var gulp = require('./gulp')([
 	'serve',
     'minifyjs',
     'minifyhtml',
-    'minifycss',
-    'livereload'
+    'minifycss'
     ]);
 gulp.task('build', ['index','browserify', 'compass', 'jade', 'images']);
 gulp.task('default', ['build', 'watch', 'serve', 'open']);
