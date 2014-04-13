@@ -6,7 +6,7 @@ Starter Gulp + Browserify project with examples of how to accomplish some common
 Includes the follwing tools, tasks, and workflows:
 
 - Browserify (with browserify-shim)
-- Stylus + nib
+- Compass
 - CoffeeScript (with source mapping!)
 - Jade
 - LiveReload
