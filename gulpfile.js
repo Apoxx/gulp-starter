@@ -2,15 +2,22 @@ var gulp = require('./gulp')([
     'index',
 	'browserify',
 	'compass',
-    'jade',
+    'jade:browserify',
 	'images',
-	'open',
+	'open:serve',
 	'watch',
-	'serve',
+	'serve:build',
     'minifyjs',
     'minifyhtml',
     'minifycss'
     ]);
-gulp.task('build', ['index','browserify', 'compass', 'jade', 'images']);
-gulp.task('default', ['build', 'watch', 'serve', 'open']);
-gulp.task('dist', ['build', 'minifyjs', 'minifyhtml', 'minifycss']);
+gulp.task('build', ['index', 'compass', 'jade'], function(){
+    gulp.src('./app/images/**').pipe(gulp.dest('./build/images'));
+});
+gulp.task('default', ['watch', 'open']);
+gulp.task('dist', ['build'], function(){
+    gulp.run('minifyjs');
+    gulp.run('minifyhtml');
+    gulp.run('minifycss');
+    gulp.run('images');
+});

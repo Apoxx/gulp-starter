@@ -6,8 +6,12 @@ module.exports = function(){
     var reload = function(){return gulp.src('').pipe(livereload());};
 
     gulp.task('rlindex',['index'],reload);
-    gulp.task('rljade',['jade','browserify'],reload);
     gulp.task('rlbrowserify',['browserify'],reload);
+
+    gulp.task('rljade',['jade'], function(){
+        gulp.run('rlbrowserify');
+    });
+
     gulp.task('rlcompass',['compass'],reload);
     gulp.task('rlimages',['images'],reload);
 

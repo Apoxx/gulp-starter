@@ -3,9 +3,9 @@ var gulp       = require('gulp');
 var imagemin   = require('gulp-imagemin');
 
 module.exports = function() {
-	var dest = './build/images';
+	var dest = './dist/images';
 
-	return gulp.src('./app/images/**')
+	return gulp.src('./build/images/**')
 		.pipe(changed(dest)) // Ignore unchanged files
 		.pipe(imagemin()) // Optimize
 		.pipe(gulp.dest(dest));
