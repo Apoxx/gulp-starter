@@ -2,10 +2,20 @@ var gulp       = require('gulp');
 var livereload = require('gulp-livereload');
 
 module.exports = function(){
-    gulp.watch('app/index.jade', ['index']);
-    gulp.watch('app/views/**', ['jade', 'browserify']);
-	gulp.watch('app/scripts/**/*', ['browserify']);
-	gulp.watch('app/styles/**', ['compass']);
-	gulp.watch('app/images/**', ['images']);
-	livereload();
+
+    var reload = function(){return gulp.src('').pipe(livereload());};
+
+    gulp.task('rlindex',['index'],reload);
+    gulp.task('rljade',['jade','browserify'],reload);
+    gulp.task('rlbrowserify',['browserify'],reload);
+    gulp.task('rlcompass',['compass'],reload);
+    gulp.task('rlimages',['images'],reload);
+
+    gulp.watch('app/index.jade', ['rlindex']);
+    gulp.watch('app/views/**', ['rljade']);
+	gulp.watch('app/scripts/**/*', ['rlbrowserify']);
+	gulp.watch('app/styles/**', ['rlcompass']);
+	gulp.watch('app/images/**', ['rlimages']);
+
+    livereload();
 };

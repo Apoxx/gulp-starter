@@ -6,8 +6,12 @@ var gulp = require('./gulp')([
 	'images',
 	'open',
 	'watch',
-	'serve'
-]);
-
-gulp.task('build', ['index','browserify', 'compass','jade', 'images']);
+	'serve',
+    'minifyjs',
+    'minifyhtml',
+    'minifycss',
+    'livereload'
+    ]);
+gulp.task('build', ['index','browserify', 'compass', 'jade', 'images']);
 gulp.task('default', ['build', 'watch', 'serve', 'open']);
+gulp.task('dist', ['build', 'minifyjs', 'minifyhtml', 'minifycss']);

@@ -1,7 +1,6 @@
 var changed    = require('gulp-changed');
 var gulp       = require('gulp');
 var imagemin   = require('gulp-imagemin');
-var livereload = require('gulp-livereload');
 
 module.exports = function() {
 	var dest = './build/images';
@@ -9,6 +8,5 @@ module.exports = function() {
 	return gulp.src('./app/images/**')
 		.pipe(changed(dest)) // Ignore unchanged files
 		.pipe(imagemin()) // Optimize
-		.pipe(gulp.dest(dest))
-		.pipe(livereload());
+		.pipe(gulp.dest(dest));
 };
