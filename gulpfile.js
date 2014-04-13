@@ -1,8 +1,8 @@
 var gulp = require('./gulp')([
     'index',
-	'browserify',
+	'browserify:jade',
 	'compass',
-    'jade:browserify',
+    'jade',
 	'images',
 	'open:serve',
 	'watch',
@@ -11,7 +11,7 @@ var gulp = require('./gulp')([
     'minifyhtml',
     'minifycss'
     ]);
-gulp.task('build', ['index', 'compass', 'jade'], function(){
+gulp.task('build', ['index', 'compass', 'browserify'], function(){
     gulp.src('./app/images/**').pipe(gulp.dest('./build/images'));
 });
 gulp.task('default', ['watch', 'open']);

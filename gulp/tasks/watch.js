@@ -7,19 +7,14 @@ module.exports = function(){
 
     gulp.task('rlindex',['index'],reload);
     gulp.task('rlbrowserify',['browserify'],reload);
-
-    gulp.task('rljade',['jade'], function(){
-        gulp.run('rlbrowserify');
-    });
-
     gulp.task('rlcompass',['compass'],reload);
     gulp.task('rlimages',['images'],reload);
 
     gulp.watch('app/index.jade', ['rlindex']);
-    gulp.watch('app/views/**', ['rljade']);
-	gulp.watch('app/scripts/**/*', ['rlbrowserify']);
-	gulp.watch('app/styles/**', ['rlcompass']);
-	gulp.watch('app/images/**', ['rlimages']);
+    gulp.watch('app/views/**', ['rlbrowserify']);
+    gulp.watch('app/scripts/**/*', ['rlbrowserify']);
+    gulp.watch('app/styles/**', ['rlcompass']);
+    gulp.watch('app/images/**', ['rlimages']);
 
     livereload();
 };
